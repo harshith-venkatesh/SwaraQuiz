@@ -1,3 +1,14 @@
+Video Quiz app for the music enthusiasts 
+Link: [Music Quiz] (http://swara.netlify.app/)
+Until Now features covered:
+
+Check list for current Project
+- [X] Categories of Quiz
+- [X] Integration of Chakra UI
+- [X] Score Card
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
