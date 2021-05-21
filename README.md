@@ -1,5 +1,5 @@
 Video Quiz app for the music enthusiasts 
-Link: [Music Quiz] (http://swara.netlify.app/)
+Link: [Music Quiz] (http://swara-quiz.netlify.app/)
 Until Now features covered:
 
 Check list for current Project
