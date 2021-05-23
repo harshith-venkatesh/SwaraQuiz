@@ -45,7 +45,7 @@ export const UserBoard = () => {
             {quizSelected?.totalQuestions} questions
           </Text>
           <Text textAlign='center' {...textSizeStyleProps} fontSize='large'>
-            {quizSelected!.score >= 70
+            {quizSelected!.score >= 20
               ? `Yayy! Congeratulations you have won!`
               : `Better Luck Next Time`}
           </Text>
