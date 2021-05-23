@@ -5,6 +5,9 @@ export const btnStyleProps = {
   height:'auto',
   fontWeight:'bold',
   boxShadow:'0 0 0 1px black',
+  _disabled:{
+    opacity:1
+  }
 }
 
 export const btnStyleNotSelectedProps = {
