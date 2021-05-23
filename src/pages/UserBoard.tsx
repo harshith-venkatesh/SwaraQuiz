@@ -56,7 +56,7 @@ export const UserBoard = () => {
             textAlign='center'
             fontSize='xx-large'
             {...textSizeStyleProps}
-            color={quizSelected!.score >= 70 ? 'green.700' : 'red.700'}
+            color={quizSelected!.score >= 20 ? 'green.700' : 'red.700'}
           >
             {quizSelected.score}
           </Text>

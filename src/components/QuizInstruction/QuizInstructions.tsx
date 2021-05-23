@@ -48,7 +48,7 @@ export const QuizInstructions = ({
           </ListItem>
           <ListItem>
             <ListIcon as={InfoIcon} color='blue.300' />
-            To win the quiz, score 70% or more
+            To win the quiz, score 60% or more
           </ListItem>
         </List>
         <Button mt='2rem' onClick={() => setShowInstruction(true)}>
