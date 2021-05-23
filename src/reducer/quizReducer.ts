@@ -19,6 +19,7 @@ export const quizReducer = (
   state: InitialStateType,
   action: ActionType
 ): InitialStateType => {
+  console.log(state)
   switch (action.type) {
     case INITIALIZE_QUIZ:
       return {
@@ -36,7 +37,7 @@ export const quizReducer = (
     }
     case CALCULATE_SCORE:
       if (state.quizSelected) {
-        const score = state.quizSelected.questions.reduce(
+        const scoreTotal = state.quizSelected.questions.reduce(
           (totalScore: number, { negetivePoints, points, options }): number =>
             isSelectedOptionRight(options)
               ? totalScore + points
@@ -45,11 +46,15 @@ export const quizReducer = (
               : totalScore,
           0
         )
+        console.log({scoreTotal})
+        console.log(typeof scoreTotal)
+        console.log('state check')
+        console.log(state.quizSelected.score);
         return {
           ...state,
           quizSelected: {
             ...state.quizSelected,
-            score
+            score: scoreTotal
           }
         }
       } else {

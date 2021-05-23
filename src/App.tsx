@@ -1,7 +1,7 @@
 import React from 'react'
 import { Route, Routes } from 'react-router'
 import { Footer, Header } from './components'
-import { HomePage, QuizPage } from './pages'
+import { HomePage, QuizPage, UserBoard } from './pages'
 
 function App() {
   return (
@@ -11,6 +11,7 @@ function App() {
         <Routes>
           <Route path='/' element={<HomePage />} />
           <Route path='/quiz/:quizId' element={<QuizPage />} />
+          <Route path='/userBoard' element={<UserBoard />} />
         </Routes>
       </div>
       <Footer />
