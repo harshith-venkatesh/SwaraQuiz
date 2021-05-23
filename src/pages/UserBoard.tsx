@@ -1,7 +1,9 @@
-import { Heading, Text } from '@chakra-ui/react'
+import { Heading, SimpleGrid, Text } from '@chakra-ui/react'
 import React, { useEffect } from 'react'
 import { useQuiz } from '../context/quizContext'
 import { useNavigate } from 'react-router-dom'
+import { Question } from '../dataModel/Quiz.type'
+import { AnswerContainer } from '../components/AnswerContainer/AnswerContainer'
 export const UserBoard = () => {
   const navigate = useNavigate()
   const {
@@ -58,6 +60,20 @@ export const UserBoard = () => {
           >
             {quizSelected.score}
           </Text>
+          <Heading textAlign='center' {...textSizeStyleProps} mt='2rem'>
+            Review Questions
+          </Heading>
+          <SimpleGrid textAlign='center' {...gridStyleProps}>
+            {quizSelected.questions.map(
+              (question: Question, index: number): JSX.Element => (
+                <AnswerContainer
+                  key={question._id}
+                  question={question}
+                  questionNumber={index}
+                />
+              )
+            )}
+          </SimpleGrid>
         </>
       )}
     </>

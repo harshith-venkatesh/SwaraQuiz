@@ -16,9 +16,11 @@ import {
   btnStyleWrongProps,
   nextButtonStyleProps
 } from './question-style-props'
+
 export type QuestionContainerProps = {
   question: Question
 }
+
 export const QuestionContainer = ({ question }: QuestionContainerProps) => {
   const [showAnswer, setShowAnswer] = useState(false)
   const navigate = useNavigate()
