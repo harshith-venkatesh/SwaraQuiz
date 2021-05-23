@@ -1,4 +1,4 @@
-Video Quiz app for the music enthusiasts 
+Swara Quiz app for the music enthusiasts 
 Link: [Music Quiz] (http://swara-quiz.netlify.app/)
 Until Now features covered:
 
@@ -6,6 +6,9 @@ Check list for current Project
 - [X] Categories of Quiz
 - [X] Integration of Chakra UI
 - [X] Score Card
+- [ ] Backend 
+- [ ] Authentication
+- [ ] DB enhancement with quiz questions
 
 
 
