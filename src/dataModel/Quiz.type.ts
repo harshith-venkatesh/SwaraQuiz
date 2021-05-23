@@ -20,6 +20,9 @@ export type UserScore = {
   username: string;
   score: number;
 }
+export type Quizzes = {
+  quizzes: Quiz[]
+}
 export type Quiz = {
   _id: string;
   userId?:string;
