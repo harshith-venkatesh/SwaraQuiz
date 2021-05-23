@@ -19,7 +19,7 @@ export const quizReducer = (
   state: InitialStateType,
   action: ActionType
 ): InitialStateType => {
-  console.log(state)
+
   switch (action.type) {
     case INITIALIZE_QUIZ:
       return {
@@ -46,10 +46,7 @@ export const quizReducer = (
               : totalScore,
           0
         )
-        console.log({scoreTotal})
-        console.log(typeof scoreTotal)
-        console.log('state check')
-        console.log(state.quizSelected.score);
+
         return {
           ...state,
           quizSelected: {

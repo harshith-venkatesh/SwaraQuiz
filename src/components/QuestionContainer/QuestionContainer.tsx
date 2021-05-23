@@ -40,7 +40,6 @@ export const QuestionContainer = ({ question }: QuestionContainerProps) => {
     }
   }
   const updateOption = (optionId: string) => {
-    console.log({ optionId })
     dispatch({
       type: CHOOSE_OPTION,
       payload: {
