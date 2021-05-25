@@ -11,7 +11,11 @@ import {
   btnStyleWrongProps,
   nextButtonStyleProps
 } from './question-style-props'
-import { CALCULATE_SCORE, CHOOSE_OPTION, INCREMENT_QUESTION } from '../../constants/quizContextConstants'
+import {
+  CALCULATE_SCORE,
+  CHOOSE_OPTION,
+  INCREMENT_QUESTION
+} from '../../constants/quizContextConstants'
 
 export type QuestionContainerProps = {
   question: Question
@@ -25,14 +29,12 @@ export const QuestionContainer = ({ question }: QuestionContainerProps) => {
     dispatch
   } = useQuiz()
 
-  const getQuestionStatus = () =>
-    currentQuestion !== quizSelected!.totalQuestions ? 'Next' : 'Submit'
   const updateQuestionStatus = () => {
     if (currentQuestion !== quizSelected!.totalQuestions) {
       dispatch({ type: INCREMENT_QUESTION })
     } else {
       dispatch({ type: CALCULATE_SCORE })
-      navigate('/userBoard')
+      navigate('/scoreBoard')
     }
   }
   const updateOption = (optionId: string) => {
@@ -44,6 +46,7 @@ export const QuestionContainer = ({ question }: QuestionContainerProps) => {
       }
     })
     setShowAnswer(true)
+    setTimeout(() => updateQuestionStatus(), 100)
   }
 
   return (
@@ -88,7 +91,7 @@ export const QuestionContainer = ({ question }: QuestionContainerProps) => {
           onClick={updateQuestionStatus}
           {...nextButtonStyleProps}
         >
-          {getQuestionStatus()}
+          Skip Question
         </Button>
       </Box>
     </>

@@ -32,11 +32,11 @@ export const quizReducer = (
     case CALCULATE_SCORE:
       if (state.quizSelected) {
         const scoreTotal = state.quizSelected.questions.reduce(
-          (totalScore: number, { negetivePoints, points, options }): number =>
+          (totalScore: number, { negativePoints, points, options }): number =>
             isSelectedOptionRight(options)
               ? totalScore + points
-              : negetivePoints
-              ? totalScore - negetivePoints
+              : negativePoints
+              ? totalScore - negativePoints
               : totalScore,
           0
         )

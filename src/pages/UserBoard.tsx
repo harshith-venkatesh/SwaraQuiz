@@ -3,7 +3,7 @@ import React, { useEffect } from 'react'
 import { useQuiz } from '../context/quizContext'
 import { useNavigate } from 'react-router-dom'
 import { Question } from '../dataModel/Quiz.type'
-import { AnswerContainer } from '../components/AnswerContainer/AnswerContainer'
+import { GameQuestionBoard } from '../components'
 export const UserBoard = () => {
   const navigate = useNavigate()
   const {
@@ -66,7 +66,7 @@ export const UserBoard = () => {
           <SimpleGrid textAlign='center' {...gridStyleProps}>
             {quizSelected.questions.map(
               (question: Question, index: number): JSX.Element => (
-                <AnswerContainer
+                <GameQuestionBoard
                   key={question._id}
                   question={question}
                   questionNumber={index}

@@ -10,7 +10,7 @@ export type Question = {
   question: string;
   image: string;
   points: number;
-  negetivePoints?: number;
+  negativePoints?: number;
   options: Option[]
 }
 

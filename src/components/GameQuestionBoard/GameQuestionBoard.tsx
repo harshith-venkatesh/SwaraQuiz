@@ -3,29 +3,30 @@ import { Box, Heading, Image, SimpleGrid } from '@chakra-ui/react'
 import React from 'react'
 import { Question } from '../../dataModel/Quiz.type'
 
-export type AnswerContainerProps = {
+export const imageStyleProps = {
+  height: '30rem',
+  width: '100%',
+  borderRadius: '1rem'
+}
+export type GameQuestionBoardProps = {
   question: Question
   questionNumber: number
 }
 
-export const AnswerContainer = ({
+export const GameQuestionBoard = ({
   question,
   questionNumber
-}: AnswerContainerProps) => {
+}: GameQuestionBoardProps) => {
   return (
     <>
       <Image
         src={question.image}
         alt={question.question}
-        height='30rem'
-        width='100%'
-        borderRadius='1rem'
+        {...imageStyleProps}
       />
-      <Box py='1rem'>
-        <Heading as='h4' size='sm'>
-          Question {questionNumber + 1}
-        </Heading>
-        <Heading as='h3' size='md' mt='1rem'>
+      <Box p='1rem'>
+        <Heading>Question {questionNumber + 1}</Heading>
+        <Heading size='md' mt='1rem'>
           {question.question}
         </Heading>
         <SimpleGrid columns={[1, 1]} gap='1rem' mt='2rem'>
