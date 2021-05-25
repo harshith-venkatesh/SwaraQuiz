@@ -2,6 +2,7 @@
 export const imageStyleProps = {
 	height: '20rem',
 	width: '100%',
+	bg: 'white'
 };
 
 export const cardTitleStyleProps = {

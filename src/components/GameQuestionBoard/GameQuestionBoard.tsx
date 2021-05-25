@@ -16,8 +16,8 @@ export const GameQuestionBoard = ({
         {...imageStyleProps}
       />
       <Box p='1rem'>
-        <Heading>Question {questionNumber + 1}</Heading>
-        <Heading size='md' mt='1rem'>
+        <Heading color='white'>Question {questionNumber + 1}</Heading>
+        <Heading color='white' size='md' mt='1rem'>
           {question.question}
         </Heading>
         <SimpleGrid columns={[1, 1]} gap='1rem' mt='2rem'>

@@ -1,9 +1,14 @@
-import { Heading, SimpleGrid, Text } from '@chakra-ui/react'
+import { Box, Heading, SimpleGrid, Text } from '@chakra-ui/react'
 import React, { useEffect } from 'react'
 import { useQuiz } from '../context/quizContext'
 import { useNavigate } from 'react-router-dom'
 import { Question } from '../dataModel/Quiz.type'
 import { GameQuestionBoard } from '../components'
+import {
+  scoreBoardSubtitleStyleProps,
+  scoreBoardTitleStyleProps,
+  userBoardSimpleGridStyleProps
+} from '../components/GameQuestionBoard/gameQuestionBoard-style-props'
 export const UserBoard = () => {
   const navigate = useNavigate()
   const {
@@ -26,40 +31,53 @@ export const UserBoard = () => {
   const textSizeStyleProps = {
     fontWeight: '500',
     mt: '1rem',
-    px: '1.5rem'
+    px: '1.5rem',
+    fontSize: 'x-large',
+    color: 'white'
   }
   return (
     <>
       {quizSelected && (
         <>
-          <Heading
-            as='h1'
-            textAlign='center'
-            {...textSizeStyleProps}
-            fontSize='x-large'
-          >
+          <Heading textAlign='center' {...textSizeStyleProps}>
             Quiz Result
           </Heading>
-          <Text textAlign='center' fontSize='large' {...textSizeStyleProps}>
-            You have attempted {questionsAttempted} /{' '}
-            {quizSelected?.totalQuestions} questions
-          </Text>
-          <Text textAlign='center' {...textSizeStyleProps} fontSize='large'>
-            {quizSelected!.score >= 20
-              ? `Yayy! Congeratulations you have won!`
-              : `Better Luck Next Time`}
-          </Text>
-          <Text textAlign='center' fontSize='xx-large' {...textSizeStyleProps}>
-            Your Score
-          </Text>
-          <Text
-            textAlign='center'
-            fontSize='xx-large'
-            {...textSizeStyleProps}
-            color={quizSelected!.score >= 20 ? 'green.700' : 'red.700'}
-          >
-            {quizSelected.score}
-          </Text>
+
+          <SimpleGrid {...userBoardSimpleGridStyleProps}>
+            <Box>
+              <Text textAlign='center' {...scoreBoardTitleStyleProps}>
+                Total Score
+              </Text>
+              <Text textAlign='center' {...scoreBoardSubtitleStyleProps}>
+                {quizSelected.totalQuestions * 10}
+              </Text>
+            </Box>
+            <Box>
+              <Text textAlign='center' {...scoreBoardTitleStyleProps}>
+                Final Score
+              </Text>
+              <Text textAlign='center' {...scoreBoardSubtitleStyleProps}>
+                {quizSelected.score}
+              </Text>
+            </Box>
+            <Box>
+              <Text textAlign='center' {...scoreBoardTitleStyleProps}>
+                Total Questions
+              </Text>
+              <Text textAlign='center' {...scoreBoardSubtitleStyleProps}>
+                {quizSelected.totalQuestions}
+              </Text>
+            </Box>
+            <Box>
+              <Text textAlign='center' {...scoreBoardTitleStyleProps}>
+                Questions Attempted
+              </Text>
+              <Text textAlign='center' {...scoreBoardSubtitleStyleProps}>
+                {' '}
+                {questionsAttempted}
+              </Text>
+            </Box>
+          </SimpleGrid>
           <Heading textAlign='center' {...textSizeStyleProps} mt='2rem'>
             Review Questions
           </Heading>
