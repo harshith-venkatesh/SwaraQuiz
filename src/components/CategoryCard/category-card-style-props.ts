@@ -1,31 +1,19 @@
-export const tagStyleProps = {
-	size: 'md',
-	bg: '#B5DCCD',
-	borderRadius: 'full',
-	px: '1rem',
-	py: '0.3rem',
-	fontWeight: '600',
-	mr: '0.5rem',
-	mt: '0.25rem',
-};
 
 export const imageStyleProps = {
 	height: '20rem',
 	width: '100%',
 };
 
-export const cardTitleProps = {
-	fontWeight: 'semibold',
+export const cardTitleStyleProps = {
+	fontWeight: '600',
 	fontSize: '1.2rem',
-	lineHeight: 'tight',
 };
 
-export const flexStyleProps = {
-	px: '1rem',
-	py: '1rem',
-	d: 'flex',
+export const cardDetailsStyleProps = {
+	display: 'flex',
 	alignItems: 'center',
 	justifyContent: 'space-between',
+	p:'1rem'
 };
 
 export const cardWrapperStyleProps = {

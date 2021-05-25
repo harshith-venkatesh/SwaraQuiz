@@ -57,5 +57,4 @@ export const nextButtonStyleProps = {
     transform:'scale(1.1)',
     borderColor:'blue.700'
   }
-
 }
