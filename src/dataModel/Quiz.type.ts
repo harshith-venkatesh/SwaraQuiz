@@ -36,11 +36,3 @@ export type Quiz = {
   level?: string;
   highScore: UserScore[];
 }
-
-export type CategoryOfQuiz = {
-  _id: string;
-  image: string;
-  type: string;
-  noOfQuiz: number;
-  cardColor: string;
-}

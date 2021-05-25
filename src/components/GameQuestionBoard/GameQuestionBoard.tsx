@@ -1,13 +1,8 @@
 import { CheckIcon, CloseIcon } from '@chakra-ui/icons'
 import { Box, Heading, Image, SimpleGrid } from '@chakra-ui/react'
 import React from 'react'
+import { imageStyleProps } from './gameQuestionBoard-style-props'
 import { GameQuestionBoardProps } from './GameQuestionBoard.type'
-
-export const imageStyleProps = {
-  height: '30rem',
-  width: '100%',
-  borderRadius: '1rem'
-}
 
 export const GameQuestionBoard = ({
   question,
@@ -41,8 +36,12 @@ export const GameQuestionBoard = ({
             }
             return (
               <Box {...optionCardStyleProps} key={option._id}>
-                {option.isSelected && option.isAnswer && <CheckIcon mr='2' />}
-                {option.isSelected && !option.isAnswer && <CloseIcon mr='2' />}
+                {option.isSelected && option.isAnswer && (
+                  <CheckIcon bg='none' mr='2' />
+                )}
+                {option.isSelected && !option.isAnswer && (
+                  <CloseIcon bg='none' mr='2' />
+                )}
                 {option.text}
               </Box>
             )
