@@ -31,7 +31,11 @@ export const QuizPage = () => {
 
   return (
     <>
-      {quiz === null && <Box>Loading</Box>}
+      {quiz === null && (
+        <div className='loaderBody'>
+          <div className='water'>Loading</div>
+        </div>
+      )}
       {quiz && !showInstruction ? (
         <QuizInstructions quiz={quiz} setShowInstruction={setShowInstruction} />
       ) : (
