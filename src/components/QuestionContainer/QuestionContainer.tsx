@@ -1,15 +1,16 @@
 import React, { useState } from 'react'
-import { ArrowForwardIcon } from '@chakra-ui/icons'
 import { useQuiz } from '../../context/quizContext'
 import { Question } from '../../dataModel/Quiz.type'
 import { useNavigate } from 'react-router-dom'
-import { Box, Button, Heading, Image, SimpleGrid } from '@chakra-ui/react'
+import { Box, Button, Flex, Heading, Image, SimpleGrid } from '@chakra-ui/react'
 import {
   btnStyleCorrectProps,
   btnStyleNotSelectedProps,
   btnStyleProps,
   btnStyleWrongProps,
-  nextButtonStyleProps
+  imageStyleProps,
+  nextButtonStyleProps,
+  questionTitleStyleProps
 } from './question-style-props'
 import {
   CALCULATE_SCORE,
@@ -46,7 +47,7 @@ export const QuestionContainer = ({ question }: QuestionContainerProps) => {
       }
     })
     setShowAnswer(true)
-    setTimeout(() => updateQuestionStatus(), 100)
+    setTimeout(() => updateQuestionStatus(), 1000)
   }
 
   return (
@@ -54,17 +55,11 @@ export const QuestionContainer = ({ question }: QuestionContainerProps) => {
       <Image
         src={question.image}
         alt={question.question}
-        height='30rem'
-        width='100%'
-        borderRadius='1rem'
+        {...imageStyleProps}
       />
       <Box py='1rem'>
-        <Heading as='h4' size='sm'>
-          Question {currentQuestion}
-        </Heading>
-        <Heading as='h3' size='md' mt='1rem'>
-          {question.question}
-        </Heading>
+        <Heading color='white'>Question {currentQuestion}</Heading>
+        <Heading {...questionTitleStyleProps}>{question.question}</Heading>
         <SimpleGrid columns={[1, 1]} gap='1rem' mt='2rem'>
           {question.options.map((option) => {
             const isAnswerCSSChanges = showAnswer
@@ -85,14 +80,15 @@ export const QuestionContainer = ({ question }: QuestionContainerProps) => {
             )
           })}
         </SimpleGrid>
-        <Button
-          rightIcon={<ArrowForwardIcon />}
-          {...btnStyleProps}
-          onClick={updateQuestionStatus}
-          {...nextButtonStyleProps}
-        >
-          Skip Question
-        </Button>
+        <Flex justify='flex-end'>
+          <Button
+            {...btnStyleProps}
+            onClick={updateQuestionStatus}
+            {...nextButtonStyleProps}
+          >
+            Skip Question
+          </Button>
+        </Flex>
       </Box>
     </>
   )

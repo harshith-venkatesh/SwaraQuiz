@@ -18,28 +18,39 @@ export const btnStyleNotSelectedProps = {
 }
 
 export const btnStyleCorrectProps = {
-  color: 'gray.700',
+  color: 'white',
   bg:'green.300',
   border: '0.3rem solid green.300',
   _active:{
-    color: 'gray.700',
+    color: 'white',
     bg:'green.300',
     border: '0.3rem solid green.300',
   },
   _hover:{
-    color: 'gray.700',
+    color: 'white',
     bg:'green.300',
     border: '0.3rem solid green.300',
   }
-  
+}
+export const imageStyleProps = {
+        height:'30rem',
+        width:'100%',
+        borderRadius:'1rem',
+        color: 'white'
+}
+
+export const questionTitleStyleProps = {
+  size:'md' ,
+  mt:'1rem',
+  color: 'white'
 }
 
 export const btnStyleWrongProps = {
-  color: 'gray.700',
+  color: 'white',
   bg:'red.300',
   border: '0.3rem solid red.300',
   _hover:{
-    color: 'gray.700',
+    color: 'white',
     bg:'red.300',
     border: '0.3rem solid red.300',
   }
@@ -47,8 +58,8 @@ export const btnStyleWrongProps = {
 
 export const nextButtonStyleProps = {
   mt:'1.5rem',
-  color:'gray.300' ,
-  bg:'blue.400',
+  color:'white' ,
+  bg:'#5f854f',
   _hover:{
     bg: 'blue.700'
   },

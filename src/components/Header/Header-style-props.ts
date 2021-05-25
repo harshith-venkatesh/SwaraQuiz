@@ -17,5 +17,8 @@ export const headerStyleProps = {
           borderStyle:'solid',
           borderColor:'gray.300',
           align:'center',
-          justifyContent:'space-between'
+          justifyContent:'space-between',
+					borderBottom: '1px solid #3b2db0',
+					borderBottomLeftRadius:'1rem',
+					borderBottomRightRadius:'1rem'
 }
