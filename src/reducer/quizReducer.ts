@@ -69,8 +69,7 @@ export const quizReducer = (
           (question) => question._id === action.payload.questionId
         )
 
-        const calculateScore = answeredQuestions.filter(question => question._id === action.payload.questionId)
-          console.log({calculateScore})
+
         return {
           ...state,
           quizSelected: {
