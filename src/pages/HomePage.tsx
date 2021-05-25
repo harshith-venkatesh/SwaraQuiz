@@ -7,7 +7,7 @@ import { Quiz } from '../dataModel/Quiz.type'
 export const HomePage = () => {
   return (
     <>
-      <Heading pt='2rem' pb='3rem' px='1.5rem' textAlign='center' id='expplore'>
+      <Heading pt='2rem' pb='3rem' px='1.5rem' textAlign='center' id='explore'>
         Featured Quizzes
       </Heading>
       <SimpleGrid columns={[1, 2, 3]} gap='2rem' maxW='67rem' margin='auto'>

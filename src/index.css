@@ -1,4 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@500&display=swap');
 @import 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css';
+*{
+	background-color: #a224fe;
+}
 .quiz__container {
-	min-height: calc(100vh - 5rem);
+	min-height: 100vh;
+	
 }

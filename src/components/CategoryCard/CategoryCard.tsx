@@ -4,16 +4,17 @@ import { Link } from 'react-router-dom'
 import { Quiz } from '../../dataModel/Quiz.type'
 import {
   cardTitleStyleProps,
-  cardWrapperStyleProps,
+  cardStyleProps,
   cardDetailsStyleProps,
-  imageStyleProps
+  imageStyleProps,
+  btnStyleProps
 } from './category-card-style-props'
 
 export const CategoryCard = ({ quiz }: { quiz: Quiz }) => {
   return (
     <>
       <Link to={`/quiz/${quiz._id}`}>
-        <Box {...cardWrapperStyleProps}>
+        <Box {...cardStyleProps}>
           <Image src={quiz.image} alt={quiz.name} {...imageStyleProps} />
           <Box {...cardDetailsStyleProps}>
             <Box>
@@ -21,9 +22,9 @@ export const CategoryCard = ({ quiz }: { quiz: Quiz }) => {
                 {quiz.name}
               </Box>
             </Box>
-            <Box textAlign='right' my='1rem'>
-              <Button>Play Now</Button>
-            </Box>
+            <Button textAlign='right' {...btnStyleProps}>
+              Play Now
+            </Button>
           </Box>
         </Box>
       </Link>

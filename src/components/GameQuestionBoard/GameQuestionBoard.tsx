@@ -1,16 +1,12 @@
 import { CheckIcon, CloseIcon } from '@chakra-ui/icons'
 import { Box, Heading, Image, SimpleGrid } from '@chakra-ui/react'
 import React from 'react'
-import { Question } from '../../dataModel/Quiz.type'
+import { GameQuestionBoardProps } from './GameQuestionBoard.type'
 
 export const imageStyleProps = {
   height: '30rem',
   width: '100%',
   borderRadius: '1rem'
-}
-export type GameQuestionBoardProps = {
-  question: Question
-  questionNumber: number
 }
 
 export const GameQuestionBoard = ({
