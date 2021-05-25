@@ -1,11 +1,6 @@
 import React, { useState } from 'react'
 import { ArrowForwardIcon } from '@chakra-ui/icons'
 import { useQuiz } from '../../context/quizContext'
-import {
-  CALCULATE_SCORE,
-  CHOOSE_OPTION,
-  INCREMENT_QUESTION
-} from '../../context/quizContext.type'
 import { Question } from '../../dataModel/Quiz.type'
 import { useNavigate } from 'react-router-dom'
 import { Box, Button, Heading, Image, SimpleGrid } from '@chakra-ui/react'
@@ -16,6 +11,7 @@ import {
   btnStyleWrongProps,
   nextButtonStyleProps
 } from './question-style-props'
+import { CALCULATE_SCORE, CHOOSE_OPTION, INCREMENT_QUESTION } from '../../constants/quizContextConstants'
 
 export type QuestionContainerProps = {
   question: Question

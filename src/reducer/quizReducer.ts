@@ -1,12 +1,6 @@
-import {
-  ActionType,
-  CALCULATE_SCORE,
-  CHOOSE_OPTION,
-  INCREMENT_QUESTION,
-  INITIALIZE_QUIZ,
-  InitialStateType,
-  RESET_QUIZ
-} from '../context/quizContext.type'
+
+import { CALCULATE_SCORE, CHOOSE_OPTION, INCREMENT_QUESTION, INITIALIZE_QUIZ, RESET_QUIZ } from '../constants/quizContextConstants'
+import { ActionType, InitialStateType } from '../context/quizContext.type'
 import { isSelectedOptionRight } from '../utils/isSelectedOptionRight'
 
 export const initialState: InitialStateType = {

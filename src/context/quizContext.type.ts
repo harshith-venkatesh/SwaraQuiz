@@ -1,10 +1,5 @@
+import { CALCULATE_SCORE, CHOOSE_OPTION, INCREMENT_QUESTION, INITIALIZE_QUIZ, RESET_QUIZ } from '../constants/quizContextConstants'
 import { Quiz } from '../dataModel/Quiz.type'
-
-export const INITIALIZE_QUIZ = 'INITIALIZE_QUIZ';
-export const INCREMENT_QUESTION = 'INCREMENT_QUESTION';
-export const CALCULATE_SCORE = 'CALCULATE_SCORE';
-export const CHOOSE_OPTION = 'CHOOSE_OPTION';
-export const RESET_QUIZ = 'RESET_QUIZ';
 
 export type InitialStateType = {
   quizSelected: Quiz | null;

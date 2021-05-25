@@ -3,8 +3,10 @@ import React, { useState } from 'react'
 import { useParams } from 'react-router'
 import { QuizContainer } from '../components/QuizContainer/QuizContainer'
 import { QuizInstructions } from '../components/QuizInstruction/QuizInstructions'
+import { INITIALIZE_QUIZ, RESET_QUIZ } from '../constants/quizContextConstants'
+
 import { useQuiz } from '../context/quizContext'
-import { INITIALIZE_QUIZ, RESET_QUIZ } from '../context/quizContext.type'
+
 import { quizDB } from '../database/quizdb'
 import { Quiz } from '../dataModel/Quiz.type'
 
