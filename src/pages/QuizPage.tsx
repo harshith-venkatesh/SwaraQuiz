@@ -1,4 +1,3 @@
-import { Box } from '@chakra-ui/react'
 import React, { useState } from 'react'
 import { useParams } from 'react-router'
 import { QuizContainer } from '../components/QuizContainer/QuizContainer'

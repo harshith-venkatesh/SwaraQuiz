@@ -18,7 +18,7 @@ export const QuizContainer = ({
       {quiz && (
         <>
           <Heading textAlign='center' {...quizTitleStyleProps}>
-            {quiz.name}
+            {quiz.name} {currentQuestion} / {quiz.totalQuestions}
           </Heading>
           <SimpleGrid textAlign='center' {...simpleGridStyleProps}>
             <QuestionContainer
